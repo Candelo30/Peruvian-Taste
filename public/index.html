@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peruvian Taste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 
+
+      # Galeria de Fotos.
+      # Apartado de Blog para poner las alargias y más.
+      
+     -->
+    <header class="header">
+      <div class="header-logo">
+        <img src="../source/icons/burger-solid.svg" alt="" />
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </nav>
+      <div class="header-icons__container">
+        <img src="../source/icons/menu-bars.svg" alt="" />
+      </div>
+    </header>
+    <div class="hero">
+      <div class="overlay"></div>
+      <p>
+        Bienvenidos a Peruvian Taste. Descubre la esencia auténtica de la cocina
+        peruana en cada plato. 🇵🇪🍽️
+      </p>
+      <div class="scroll-down-container">
+        <a href="#menu" class="scroll-down-link">
+          <span class="arrow"></span>
+          Scroll Down
+        </a>
+      </div>
+    </div>
+    <main class="content">
+      <section class="menu" id="menu">
+        <h1>Menu</h1>
+
+        <div class="product-container" id="productContainer">
+          <!-- Cajas de productos se llenarán dinámicamente con JavaScript -->
+        </div>
+      </section>
+      <section class="gallery" id="gallery">
+        <h1>Gallery</h1>
+      </section>
+      <div id="myModal" class="modal">
+        <div class="containerButtomClose">
+          <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-content">
+          <div class="modal-conainer__img">
+            <img id="modalImage" src="" alt="Producto" />
+          </div>
+          <div class="modalDescription">
+            <h2 id="modalTitle"></h2>
+            <button onclick="toggleSection('modaldescriptions')">
+              Descrición
+            </button>
+            <ul id="modaldescriptions" class="details-list"></ul>
+            <button onclick="toggleSection('modalAlergias')">Alergias</button>
+            <ul id="modalAlergias" class="details-list"></ul>
+            <button onclick="toggleSection('modalIngredientes')">
+              Ingredientes
+            </button>
+            <ul id="modalIngredientes" class="details-list"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>

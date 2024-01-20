@@ -1,0 +1,299 @@
+:root {
+  --bg-primary-color: #ffca34;
+  --border-radius: 5px;
+
+  /* Text */
+
+  --font-text: "Josefin Sans", sans-serif;
+  --color-text: #ffffff;
+
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-text);
+}
+
+body {
+  margin: 0;
+  background-color: #050400;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.content {
+  padding-top: 60px; /* Ajusta el espacio para el encabezado fijo */
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(
+    12,
+    12,
+    12,
+    0.397
+  ); /* Cambia el color de fondo del encabezado al fijarse */
+  backdrop-filter: blur(10px);
+  z-index: 100; /* Ajusta el índice z para que esté por encima del contenido */
+}
+
+.main-nav {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  background-image: url(../source/img/Restaurante.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce-2 5s ease-in-out;
+}
+
+@keyframes bounce-2 {
+  0%,
+  50%,
+  20%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+
+  10%,
+  70%,
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero p {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--color-text);
+}
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.74);
+  height: 100vh;
+  width: 100%;
+}
+
+.scroll-down-container {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-link {
+  text-decoration: none;
+  color: #7c7c7c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #333;
+  margin-bottom: 5px;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.menu,
+.gallery {
+  margin-top: 20px;
+}
+
+.menu h1,
+.gallery h1 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--bg-primary-color);
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  justify-content: space-around;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.product-box {
+  border: 1px solid var(--bg-primary-color);
+  color: var(--color-text);
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  flex: 2 0 350px;
+}
+
+.product-box:hover {
+  transform: translateY(-5px);
+}
+
+.product-box img {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+}
+
+.modal {
+  z-index: 1000;
+  display: none;
+  position: fixed; /* Cambiado a fixed para asegurar la posición fija en la pantalla */
+  /* Para centrar vertical y horizontalmente */
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid var(--bg-primary-color);
+}
+
+#modalTitle {
+  margin-left: 10px;
+}
+
+.modal.modalOpen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  border: 1px solid var(--bg-primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(10px);
+  width: 50%;
+  max-width: 600px; /* Ajusta según tus necesidades */
+}
+
+.modal-conainer__img {
+  width: 100%;
+  display: inline-block;
+}
+
+.modal-conainer__img img {
+  width: 100%;
+}
+
+.modalDescription button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-primary-color);
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.modalDescription button:hover {
+  background-color: #b48503;
+}
+
+.details-list {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 5s ease-in-out;
+}
+
+.details-list.active {
+  display: block;
+  max-height: 500px; /* Ajusta según sea necesario, un valor grande para permitir suficiente espacio */
+}
+
+.containerButtomClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.438);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--bg-primary-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.close {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modalDescription {
+  overflow-y: auto;
+  max-height: 400px; /* Ajusta según sea necesario */
+  transition: max-height 5s ease-in-out;
+}

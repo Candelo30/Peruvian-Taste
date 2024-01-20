@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Alfajores",
+    "Description": ["Los alfajores peruanos son una delicia dulce que se distingue por su sabor delicado y su textura indulgente. Estos deliciosos aperitivos consisten en dos galletas suaves y ligeras, a menudo con un ligero sabor a mantequilla o vainilla, que envuelven un generoso relleno de dulce de leche."],
+    "image": "../source/img/Alfajores.jpg",
+    "alergias": ["Alergia 1", "Alergia 2"],
+    "ingredientes": ["Ingrediente 1", "Ingrediente 2"]
+  },
+  {
+    "id": 2,
+    "name": "Empanadas de Carne",
+    "Description": ["Descrición para las empanadas de Carne."],
+    "image": "../source/img/Empanada-peruana-shutterstock_102114526.jpg",
+    "alergias": ["Alergia 1", "Alergia 2"],
+    "ingredientes": ["Ingrediente 1", "Ingrediente 2"]
+  },
+  {
+    "id": 3,
+    "name": "Butifarra",
+    "Description": ["Descrición para la Butifarra."],
+    "image": "../source/img/Butifarra.jpg",
+    "alergias": ["Alergia 1", "Alergia 2"],
+    "ingredientes": ["Ingrediente 1", "Ingrediente 2"]
+  },
+  {
+    "id": 4,
+    "name": "Empanadas de Champiñones",
+    "Description": ["Descrición para las empanadas de Champiñones."],
+    "image": "../source/img/chapiñones.jpg",
+    "alergias": ["Alergia 1", "Alergia 2"],
+    "ingredientes": ["Ingrediente 1", "Ingrediente 2"]
+  },
+  {
+    "id": 5,
+    "name": "Empanadas de Pollo",
+    "Description": ["Descrición para las empanadas de Pollo."],
+    "image": "../source/img/empanada de pollo.jpg",
+    "alergias": ["Alergia 1", "Alergia 2"],
+    "ingredientes": ["Ingrediente 1", "Ingrediente 2"]
+  },
+  {
+    "id": 6,
+    "name": "Tamales",
+    "Description": ["Descrición para los Tamales."],
+    "image": "../source/img/Tamales.jpg",
+    "alergias": ["Alergia 1", "Alergia 2"],
+    "ingredientes": ["Ingrediente 1", "Ingrediente 2"]
+  }
+]
